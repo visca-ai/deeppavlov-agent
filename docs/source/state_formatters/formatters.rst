@@ -32,11 +32,11 @@ Human utterance have an additional parameters:
 
 Bot utterance also have additional attributes:
 
-  * Active skill name (skill, which provided actual response) - ``utterance['active_skill']``
+  * Active crg name (crg, which provided actual response) - ``utterance['active_skill']``
   * Response confidence - ``utterance['confidence']``
   * Original response text (not modified by postprocessors) - ``utterance['orig_text']``
 
 **Response formatters**
 
-This functions should accept one sample of skill response, and re-format it, making further processing available.
+This functions should accept one sample of crg response, and re-format it, making further processing available.
 This formatters are optional.

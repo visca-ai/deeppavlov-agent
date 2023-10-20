@@ -207,7 +207,7 @@ class PipelineConfigParser:
                 v.update({'connector_name': k})
                 self.make_connector(f'connectors.{k}', v)
 
-        # collect residual connectors, form skill names
+        # collect residual connectors, form crg names
         for k, v in self.config['services'].items():
             if 'connector' in v:  # single service
                 if isinstance(v['connector'], dict):

@@ -30,7 +30,7 @@ setuptools.setup(
                 'alongside with saving sample processing results in database.',
     long_description='An open source library, allowing you to create data processing systems based on a sequence '
                      'graph, alongside with saving sample processing results in database. '
-                     'Possible application is chatbots or other NLP systems which combine multiple skills.',
+                     'Possible application is chatbots or other NLP systems which combine multiple crg.',
     keywords=['chatbots', 'microservices', 'dialog systems', 'NLP'],
     packages=setuptools.find_packages(exclude=('docs',)),
     python_requires='>=3.7',

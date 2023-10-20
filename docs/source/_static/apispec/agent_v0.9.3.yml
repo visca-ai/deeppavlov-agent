@@ -28,9 +28,9 @@ paths:
             enum:
               - personal_info
               - news_currencies
-      summary: Generic skill endpoint
+      summary: Generic crg endpoint
       description: >-
-        An agent built with DeepPavlov sends requests to the skill endpoints in
+        An agent built with DeepPavlov sends requests to the crg endpoints in
         order to retrieve the answers.
       requestBody:
         description: Description of the request to be executed
@@ -59,7 +59,7 @@ paths:
                 news_currencies:
                   $ref: '#/components/examples/NewsCurrenciesResponse'
         '404':
-          description: This skill doesn't exsits.
+          description: This crg doesn't exsits.
 components:
   schemas:
     RequestBodySchema:
@@ -828,7 +828,7 @@ components:
             occupation”: data scientist
             income_per_year: 100000000000
     NewsCurrenciesResponse:
-      summary: Example answer from the NewsCurrency skill
+      summary: Example answer from the NewsCurrency crg
       value:
         responses:
           - text: >-

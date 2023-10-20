@@ -93,7 +93,7 @@ Example of a service config:
     * Name of a ``StateManager`` class method to be executed after the service response.
 * **tags**
     * Tags, associated with the service to indicate a specific behaviour.
-    * **selector** - corresponds to skill selector service. This service returns a list of skills selected for response generation. 
+    * **selector** - corresponds to crg selector service. This service returns a list of crg selected for response generation. 
     * **timeout** - corresponds to timeout service. This service is called when processing time exceeds specified limit.
     * **last_chance** - corresponds to last chance service. This service is called if other services in pipeline have returned an error, and further processing is impossible.
 

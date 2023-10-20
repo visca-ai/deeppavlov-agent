@@ -19,7 +19,7 @@ ConfidenceResponseSelectorConnector
 This connector provides a simple response selection functionality. It chooses a best hypothesis based on its ``confidence`` parameter. In order to use it, you should consider a few things:
 
     * You don't need to define a dialog formatter (if you use built-in state manager)
-    * You need to ensure, that all of your skills (or services with assighed ``add_hypothesis`` SM method) provides a ``confidence`` value somehow
+    * You need to ensure, that all of your crg (or services with assighed ``add_hypothesis`` SM method) provides a ``confidence`` value somehow
     * It returns a chosen hypothesis, so you don't need to define output formatter as well
     * No special configuration parameters are needed
 
@@ -33,7 +33,7 @@ So the basic configuration for it is very simple:
             "class_name": "ConfidenceResponseSelectorConnector"
         },
         "state_manager_method": "add_bot_utterance",
-        "previous_services": ["place previous skill names here"]
+        "previous_services": ["place previous crg names here"]
     }}
 
 PredefinedTextConnector
@@ -72,11 +72,11 @@ This connector have only one initialisation parameter:
 
     * ``output`` - list or dict, which will be passed to agent's callback as payload
 
-This example configuration represents a dummy service, representing skill:
+This example configuration represents a dummy service, representing crg:
 
 .. code:: json
 
-    {"skill": {
+    {"crg": {
         "connector": {
             "protocol": "python",
             "class_name": "PredefinedOutputConnector",
@@ -88,7 +88,7 @@ This example configuration represents a dummy service, representing skill:
         "previous_services": ["list of the previous_services"]
     }}
 
-But you can imitate any skill type with this connector.
+But you can imitate any crg type with this connector.
 
 
 Writing your own connectors

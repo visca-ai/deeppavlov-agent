@@ -1,7 +1,7 @@
 Welcome to DeepPavlov Agent documentation!
 ==========================================
 
-**DeepPavlov Agent** is a framework for development of scalable and production ready multi-skill virtual assistants, complex dialogue systems and chatbots.
+**DeepPavlov Agent** is a framework for development of scalable and production ready multi-crg virtual assistants, complex dialogue systems and chatbots.
 
 .. toctree::
    :glob:

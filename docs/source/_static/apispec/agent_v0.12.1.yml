@@ -27,7 +27,7 @@ paths:
           schema:
             enum:
               - model
-      summary: Generic skill endpoint
+      summary: Generic crg endpoint
       description: >-
         An agent built with DeepPavlov Agent sends requests to the services endpoints in
         order to retrieve the answers.
@@ -52,7 +52,7 @@ paths:
                 odqa:
                   $ref: "#/components/examples/ODQAResponse"
         '404':
-          description: This skill doesn't exsits.
+          description: This crg doesn't exsits.
 components:
   schemas:
     RequestBodySchema:
@@ -113,7 +113,7 @@ components:
             type: object
     Bot:
       description: >-
-        REQUIRED. A bot user of the dialog. A bot is an agent with a particular skill set.
+        REQUIRED. A bot user of the dialog. A bot is an agent with a particular crg set.
       type: object
       properties:
         id:
@@ -206,7 +206,7 @@ components:
         orig_text:
           type: string
           description: >-
-            An original reponse given by the skill which can be transformed later by ResponseSelector
+            An original reponse given by the crg which can be transformed later by ResponseSelector
             or Postprocessor. If it was transformed, the transformed response goes to the "text" field
             and the original response is stored to the "orig_text" field. The field has value None by default.
         user:
@@ -223,20 +223,20 @@ components:
         active_skill:
           type: string
           description: >-
-            A name of the skill which was responsible for the final bot response generation.
+            A name of the crg which was responsible for the final bot response generation.
     Annotations:
       description: >-
         REQUIRED. The utterances annotations, or tags. The default values of the field is an empty array: []. If the dialog starts with "/start" utterance, this utterance is not being annotated.
       type: object
     ODQAResponse200Unit:
       description: >-
-        A list of skill responses. Each response here is a hypothetical response to the same human utterance. So s skill should generate a number of possible reponses for each incoming human utterance.
+        A list of crg responses. Each response here is a hypothetical response to the same human utterance. So s crg should generate a number of possible reponses for each incoming human utterance.
       type: array
       items:
         type: object
         properties:
           text:
-            description: A text reponse of the skill.
+            description: A text reponse of the crg.
             type: string
           confidence:
             description: >-
@@ -244,7 +244,7 @@ components:
             type: number
     ODQAResponse200Schema:
       description: >-
-        A batch of lists or skill responses. A skill should provide a list of hypothetical answers for each incoming human utterance.
+        A batch of lists or crg responses. A crg should provide a list of hypothetical answers for each incoming human utterance.
       properties:
         responses:
           type: array
@@ -399,7 +399,7 @@ components:
           attributes: {}
         version: 0.12.0
     ODQAResponse:
-      description: An example of Open Domain Question Answering (ODQA) skill.
+      description: An example of Open Domain Question Answering (ODQA) crg.
       value:
         responses:
           -

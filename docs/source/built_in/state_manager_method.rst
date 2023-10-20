@@ -57,7 +57,7 @@ You can use several state manager methods in your pipeline:
     * ``active_skill`` field is filled with ``skill_name`` value from payload
     * ``confidence`` field is filled with ``confidence`` value from payload
     * ``annotations`` from payload are copyed to ``annotations`` field of bot utterance
-    * We expect, that skills will return ``text`` and ``confidence`` fields at least. ``skill_name`` and ``annotations`` are created within ``add_hypothesis`` method
+    * We expect, that crg will return ``text`` and ``confidence`` fields at least. ``skill_name`` and ``annotations`` are created within ``add_hypothesis`` method
 
 7. **add_bot_utterance_last_chance**
     * This method is intended to be associated with a failure processing service, like timeout or last chance responder

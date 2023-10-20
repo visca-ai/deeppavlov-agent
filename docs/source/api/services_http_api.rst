@@ -46,7 +46,7 @@ Also, Sentiment annotator can return just a string:
 Skill Selector
 ==============
 
-Skill Selector service should return a list of names for skills selected to generate a candidate response for a dialog.
+Skill Selector service should return a list of names for crg selected to generate a candidate response for a dialog.
 
 For example:
 
@@ -67,7 +67,7 @@ All attributes in ``human_attributes`` and ``bot_attributes`` will overwrite cur
 attribute values in agent state. And if there are no such attributes,
 they will be stored under ``attributes`` key inside **Human** or **Bot**.
 
-The minimum required response of a skill is a 2-key dictionary:
+The minimum required response of a crg is a 2-key dictionary:
 
 
     .. code:: json
@@ -89,7 +89,7 @@ But it's possible to extend it with  ``human_attributes`` and ``bot_attributes``
 Everything sent to ``human_attributes`` and ``bot_attributes`` keys will update `user` field in the same
 utterance for the human and in the next utterance for the bot. Please refer to agent state_ documentation for more information about the **User** object updates.
 
-Also it's possible for a skill to send any additional key to the state:
+Also it's possible for a crg to send any additional key to the state:
 
     .. code:: json
 
@@ -101,9 +101,9 @@ Also it's possible for a skill to send any additional key to the state:
 Response Selector
 =================
 
-Unlike Skill Selector, Response Selector service should select a *single* skill as a source of the
-final version of response. The service returns a name of the selected skill, text (might be
-overwritten from the original skill response) and confidence (also might be overwritten):
+Unlike Skill Selector, Response Selector service should select a *single* crg as a source of the
+final version of response. The service returns a name of the selected crg, text (might be
+overwritten from the original crg response) and confidence (also might be overwritten):
 
  .. code:: json
 

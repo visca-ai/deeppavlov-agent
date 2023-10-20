@@ -32,9 +32,9 @@ paths:
               - news
               - currencies
               - news_currencies
-      summary: Generic description of a skill endpoint
+      summary: Generic description of a crg endpoint
       description: >-
-        An agent built with DeepPavlov sends requests to the skill endpoints
+        An agent built with DeepPavlov sends requests to the crg endpoints
         in order to retrieve the answers.
       requestBody:
         description: >-
@@ -52,7 +52,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/ODQAChitChatResponse200Schema"
         404:
-          description: This skill doesn't exsits.
+          description: This crg doesn't exsits.
 
   /api/v0/news_currencies/:
     post:
@@ -629,7 +629,7 @@ components:
             occupation”: "data scientist"
             income_per_year: 100000000000
     NewsCurrenciesResponse:
-      summary: Example answer from the NewsCurrency skill
+      summary: Example answer from the NewsCurrency crg
       value:
         responses:
           - text: "Some news (with titles, bodies, etc.) or currencies info as plain text"
